@@ -11,10 +11,14 @@
             "id": "e71c099cb1c40de6",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "그래프 뷰"
+              "type": "markdown",
+              "state": {
+                "file": "회의/ai_cognitive_outsourcing.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ai_cognitive_outsourcing"
             }
           }
         ]
@@ -79,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "c7cde48afbe83b8b",
@@ -95,6 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "회의/ai_cognitive_outsourcing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,6 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "회의/ai_cognitive_outsourcing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -155,6 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "회의/ai_cognitive_outsourcing.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -183,8 +190,15 @@
   },
   "active": "e71c099cb1c40de6",
   "lastOpenFiles": [
-    "회의/ai_cognitive_outsourcing.md",
+    "add_log.ps1",
+    "add_log.py",
+    "중립/README.md",
+    "반대/README.md",
+    "찬성/README.md",
+    "_templates/llm_wiki_template.md",
+    "_templates",
     "회의/[26.09.16]-게임_AI_활용_바운더리와_인지_외주화_종합_회의록.md",
+    "회의/ai_cognitive_outsourcing.md",
     "README.md"
   ]
 }
