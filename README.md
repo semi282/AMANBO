@@ -1,36 +1,43 @@
-# 👥 아만보팀 (AMANBO) — 아는 만큼 보인다
+# 👥 아만보팀 [아는만큼보인다]
 
-> **"개발과 창작의 경계에서 AI를 어디까지 인정하고 공존할 것인가?"**  
-> AI 활용에 대한 다각도 토론(하브루타), **RAW-SCHEMA-WIKI 3단 지식 파이프라인**, 바이브 코딩(Vibe Coding)을 통한 웹 서비스 제작 프로젝트
+> **"AI가 발전함에 따라 게임 개발에서도 AI에 의존하는 경우가 많아졌다.**  
+> **프로그래밍을 시작으로 아트, 기획의 영역까지 확장되는 상황에서 우리는 개발 환경 속에서 AI를 어디까지 인정할 것인가"**
 
----
-
-## 🧑‍🤝‍🧑 팀원 소개 & 개인별 LLM WIKI
-
-| 이름 | 출생년도 | 주요 포지션 | 담당 역할 | 개인 LLM WIKI 홈 |
-| :---: | :---: | :---: | :--- | :---: |
-| **함석신** | 1993년생 | 🟡 **중립 / 조정** | • 팀 리딩 및 룰 세팅<br>• 휴먼 인 더 루프 가이드라인 수립 | 🔗 [중립 WIKI](file:///c:/Users/think/Documents/sesac_project/AMANBO/중립/README.md) |
-| **김민주** | 1994년생 | 🟢 **찬성 / 혁신** | • AI 기술 도입 논거 & 생산성 혁신 사례<br>• 신기술 서비스 기획 | 🔗 [찬성 WIKI](file:///c:/Users/think/Documents/sesac_project/AMANBO/찬성/README.md) |
-| **김준호** | 1999년생 | 🔴 **반대 / 비판** | • 저작권 침해, 일자리 위협, AI Slop 분석<br>• 창작 생태계 보호 관점 제시 | 🔗 [반대 WIKI](file:///c:/Users/think/Documents/sesac_project/AMANBO/반대/README.md) |
+AI 활용에 대한 다각도 토론, **개인별 RAW-SCHEMA-WIKI 3단 지식 파이프라인**, 바이브 코딩(Vibe Coding)을 통한 웹 서비스 제작 및 발표 프로젝트입니다.
 
 ---
 
-## 🔄 아만보팀 LLM WIKI 3단 파이프라인 아키텍처
+## 🧑‍🤝‍🧑 팀원 구성 & 개인별 연구 WIKI
 
-각 팀원의 폴더는 날것의 수집 자료(`raw/`)를 규격화된 지식(`wiki/`)으로 자동 승화시키기 위해 **RAW - SCHEMA - WIKI** 3단 구조를 채택합니다.
+* **팀명**: 아만보팀 [아는만큼보인다]
+* **팀원**: **김민주, 김준호, 함석신**
+* **팀 주제**: **게임 제작을 위한 AI 활용은 어디까지 인정될 수 있을까 (토론)**
+
+| 팀원명 | 개인 연구 WIKI 홈 | 주요 연구 영역 |
+| :---: | :---: | :--- |
+| **김민주** | 🔗 [김민주 연구 WIKI](./김민주/README.md) | 게임 개발 생산성 혁신, 시니어 1인 제작, 대화형 AI 캐릭터 |
+| **김준호** | 🔗 [김준호 연구 WIKI](./김준호/README.md) | 창작 생태계 일자리 위협, 주니어 사다리 단절, 지브리풍 도용 저작권 리스크 |
+| **함석신** | 🔗 [함석신 연구 WIKI](./함석신/README.md) | 개발 파이프라인별 인정 바운더리 기준, AI 유사도 검증 거버넌스 |
+| **팀 공통** | 🏛️ [회의록 아카이브](./회의/README.md) | 일자별 회의록, 아젠다 정리, 바이브 코딩 및 발표 기획 |
+
+---
+
+## 🔄 3단 지식 파이프라인 아키텍처
+
+개인 자료와 팀 공통 자료가 섞이지 않고 깃허브 충돌을 방지하기 위해, 각 팀원 폴더는 독립된 **RAW - SCHEMA - WIKI** 구조로 운영됩니다.
 
 ```mermaid
 flowchart TD
     subgraph 1. 원천 수집 단계
-        R["📥 RAW/<br>(기사, 판례, 약관 등 날것의 데이터 원문)"]
+        R["📥 raw/<br>(기사, 판례, 인터뷰, AI 대화 원문)"]
     end
 
     subgraph 2. LLM 변환 및 규격화
-        S["📐 SCHEMA/<br>(Frontmatter 스키마 & 프롬프트 파이프라인)"]
+        S["📐 schema/<br>(Frontmatter 스키마 & 프롬프트 파이프라인)"]
     end
 
     subgraph 3. 지식 아카이빙
-        W["🧠 WIKI/<br>(Obsidian 링크 & 하브루타 논거 정제 문서)"]
+        W["🧠 wiki/<br>(정제된 위키 지식 문서)"]
     end
 
     subgraph 4. 대시보드
@@ -44,35 +51,35 @@ flowchart TD
 
 ---
 
-## 📁 전체 디렉토리 구조
+## 📁 깃허브(GitHub) 협업 디렉토리 구조
 
 ```
 AMANBO/
-├── 📂 찬성/                     # [김민주] 찬성 포지션 지식 베이스
-│   ├── 📂 raw/                 # 원문 기사, 생산성 통계 원본
-│   ├── 📂 schema/              # 찬성 스키마(schema.md) & LLM 변환 프롬프트
-│   ├── 📂 wiki/                # 정제된 찬성 위키 지식 문서
-│   └── README.md               # 찬성 WIKI 대시보드 & 활동 로그 (YYMMDD HH:mm)
+├── 📂 김민주/                    # [김민주] 개인 연구 지식 베이스
+│   ├── 📂 raw/                 # 수집한 기사 원문, 개발사 인터뷰, AI 대화
+│   ├── 📂 schema/              # 스키마(schema.md) & 변환 프롬프트(prompt_pipeline.md)
+│   ├── 📂 wiki/                # 정제된 위키 지식 문서
+│   └── README.md               # 활동 로그 (YYMMDD HH:mm) & 색인
 │
-├── 📂 반대/                     # [김준호] 반대 포지션 지식 베이스
-│   ├── 📂 raw/                 # 소송 판례, 노조 성명서, 불매 보도 원본
-│   ├── 📂 schema/              # 반대 스키마(schema.md) & LLM 변환 프롬프트
-│   ├── 📂 wiki/                # 정제된 리스크/비판 위키 지식 문서
-│   └── README.md               # 반대 WIKI 대시보드 & 활동 로그 (YYMMDD HH:mm)
+├── 📂 김준호/                    # [김준호] 개인 연구 지식 베이스
+│   ├── 📂 raw/                 # 판례, 성명서, 일자리 피해 보도, AI 대화
+│   ├── 📂 schema/              # 스키마(schema.md) & 변환 프롬프트(prompt_pipeline.md)
+│   ├── 📂 wiki/                # 정제된 위키 지식 문서
+│   └── README.md               # 활동 로그 (YYMMDD HH:mm) & 색인
 │
-├── 📂 중립/                     # [함석신] 중립/거버넌스 지식 베이스
-│   ├── 📂 raw/                 # 플랫폼 약관, 정부 규제안, 연구서 원본
-│   ├── 📂 schema/              # 중립 스키마(schema.md) & LLM 변환 프롬프트
-│   ├── 📂 wiki/                # 정제된 거버넌스/척도표 위키 지식 문서
-│   └── README.md               # 중립 WIKI 대시보드 & 활동 로그 (YYMMDD HH:mm)
+├── 📂 함석신/                    # [함석신] 개인 연구 지식 베이스
+│   ├── 📂 raw/                 # 플랫폼 정책, 법제 가이드라인, 기술 문서, AI 대화
+│   ├── 📂 schema/              # 스키마(schema.md) & 변환 프롬프트(prompt_pipeline.md)
+│   ├── 📂 wiki/                # 정제된 위키 지식 문서
+│   └── README.md               # 활동 로그 (YYMMDD HH:mm) & 색인
 │
 ├── 📂 회의/                     # [팀 공통] 종합 회의 아카이브
-│   ├── 📂 raw/                 # 회의 녹취록, 메모 초안
-│   ├── 📂 schema/              # 회의록 스키마 & LLM 요약 프롬프트
-│   ├── 📂 wiki/                # 정제된 일자별 공식 종합 회의록
-│   └── README.md               # 회의 WIKI 대시보드 & 회의 로그 (YYMMDD HH:mm)
+│   ├── 📂 raw/                 # [26.09.16]-회의록녹음요약.md (회의 녹음 전문)
+│   ├── 📂 schema/              # 회의록 스키마 & 요약 프롬프트
+│   ├── 📂 wiki/                # [26.09.16]-AI_창작과_인간의_역할_종합_회의록.md
+│   └── README.md               # 회의 히스토리 로그 (YYMMDD HH:mm)
 │
-└── README.md                   # 프로젝트 전체 통합 대시보드
+└── README.md                   # 프로젝트 메인 대시보드
 ```
 
 ---
@@ -80,24 +87,39 @@ AMANBO/
 ## 🏷️ 파일 명명 & 로그 작성 규칙 (Rules)
 
 ### 1. 개별 자료 업로드 규칙
-* **RAW 데이터**: `[작성자-자료제목_원문].md` (예: `찬성/raw/[김민주-2024_GDC_발표원문].md`)
-* **WIKI 지식**: `[작성자-자료제목].md` (예: `찬성/wiki/[김민주-인디게임_AI도입_생산성_혁신].md`)
-* **회의록**: `[yy.mm.dd]-주제.md` (예: `회의/wiki/[26.09.16]-게임_AI_활용_바운더리와_인지_외주화_종합_회의록.md`)
+* **RAW 데이터**: `[작성자-자료제목_원문].md`
+  * 예: `김민주/raw/[김민주-게임AI_프로그래밍도구_도입사례_기사].md`
+* **WIKI 지식**: `[작성자-자료제목].md`
+  * 예: `김민주/wiki/[김민주-게임AI_프로그래밍도구_도입효과].md`
+* **회의록**: `[yy.mm.dd]-주제.md`
+  * 예: `회의/wiki/[26.09.16]-AI_창작과_인간의_역할_종합_회의록.md`
 
 ### 2. ⏱️ 리드미 로그 타임스탬프 규칙 (`YYMMDD HH:mm`)
-모든 `README.md`의 활동 로그는 작업을 수행할 때마다 상단에 **`YYMMDD HH:mm`** 형식으로 기입합니다.
+모든 `README.md`의 활동 로그는 자료를 올리거나 수정할 때마다 상단에 **`YYMMDD HH:mm`** 형식으로 고정 기록합니다.
 
 ```markdown
 | 타임스탬프 (`YYMMDD HH:mm`) | 작업자 | 작업 내용 및 링크 | 비고 |
 | :---: | :---: | :--- | :--- |
-| `260916 18:00` | 김민주 | [[찬성/wiki/[김민주-인디게임_AI도입_생산성_혁신]]] 발행 | WIKI 등록 |
+| `260916 19:40` | 김민주 | [김민주-자료제목].md WIKI 발행 | 신규 등록 |
 ```
+
+---
+
+## 🐙 깃허브(GitHub) 협업 가이드라인
+
+1. **개인 폴더 격리를 통한 충돌 방지**:
+   * 각 팀원은 자신의 이름 폴더(`김민주/`, `김준호/`, `함석신/`) 안에서 자유롭게 커밋하므로 Git 충돌(Merge Conflict)이 발생하지 않습니다.
+2. **공통 파일(`회의/`, `README.md`) 편집 시**:
+   * 작업 시작 전 반드시 `git pull`을 실행하여 최신 커밋을 반영합니다.
+   * 작업 완료 후 `git add .` → `git commit -m "docs: 작업내용"` → `git push`를 진행합니다.
+3. **상대경로 링크 준수**:
+   * 깃허브 웹 및 로컬 클론 환경 어디서나 문서가 올바르게 열리도록 모든 링크는 상대경로(`../폴더명/문서.md`)로 작성합니다.
 
 ---
 
 ## 🚀 빠른 바로가기
 
-* 🟢 **찬성**: [대시보드](file:///c:/Users/think/Documents/sesac_project/AMANBO/찬성/README.md) | [스키마](file:///c:/Users/think/Documents/sesac_project/AMANBO/찬성/schema/schema.md) | [변환프롬프트](file:///c:/Users/think/Documents/sesac_project/AMANBO/찬성/schema/prompt_pipeline.md) | [WIKI목록](file:///c:/Users/think/Documents/sesac_project/AMANBO/찬성/wiki/README.md)
-* 🔴 **반대**: [대시보드](file:///c:/Users/think/Documents/sesac_project/AMANBO/반대/README.md) | [스키마](file:///c:/Users/think/Documents/sesac_project/AMANBO/반대/schema/schema.md) | [변환프롬프트](file:///c:/Users/think/Documents/sesac_project/AMANBO/반대/schema/prompt_pipeline.md) | [WIKI목록](file:///c:/Users/think/Documents/sesac_project/AMANBO/반대/wiki/README.md)
-* 🟡 **중립**: [대시보드](file:///c:/Users/think/Documents/sesac_project/AMANBO/중립/README.md) | [스키마](file:///c:/Users/think/Documents/sesac_project/AMANBO/중립/schema/schema.md) | [변환프롬프트](file:///c:/Users/think/Documents/sesac_project/AMANBO/중립/schema/prompt_pipeline.md) | [WIKI목록](file:///c:/Users/think/Documents/sesac_project/AMANBO/중립/wiki/README.md)
-* 🏛️ **회의**: [대시보드](file:///c:/Users/think/Documents/sesac_project/AMANBO/회의/README.md) | [최신 회의록](file:///c:/Users/think/Documents/sesac_project/AMANBO/회의/wiki/[26.09.16]-게임_AI_활용_바운더리와_인지_외주화_종합_회의록.md)
+* 👤 **김민주**: [대시보드](./김민주/README.md) | [변환프롬프트](./김민주/schema/prompt_pipeline.md) | [RAW보관소](./김민주/raw/README.md) | [WIKI보관소](./김민주/wiki/README.md)
+* 👤 **김준호**: [대시보드](./김준호/README.md) | [변환프롬프트](./김준호/schema/prompt_pipeline.md) | [RAW보관소](./김준호/raw/README.md) | [WIKI보관소](./김준호/wiki/README.md)
+* 👤 **함석신**: [대시보드](./함석신/README.md) | [변환프롬프트](./함석신/schema/prompt_pipeline.md) | [RAW보관소](./함석신/raw/README.md) | [WIKI보관소](./함석신/wiki/README.md)
+* 🏛️ **회의록**: [대시보드](./회의/README.md) | [녹음요약(RAW)](./회의/raw/[26.09.16]-회의록녹음요약.md) | [최신 종합 회의록(WIKI)](./회의/wiki/[26.09.16]-AI_창작과_인간의_역할_종합_회의록.md)
