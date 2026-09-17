@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "회의/raw/[26.09.16]-회의록녹음요약.md",
+                "file": "회의/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "[26.09.16]-회의록녹음요약"
+              "title": "README"
             }
           }
         ]
@@ -83,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 366.5
   },
   "right": {
     "id": "c7cde48afbe83b8b",
@@ -188,8 +188,12 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "e71c099cb1c40de6",
+  "active": "f16dbcc889b67038",
   "lastOpenFiles": [
+    "함석신/raw/[함석신]-발표_방향성_웹_vs_언리얼_MCP_비교.md",
+    "workspace 1.json",
+    "workspace.json",
+    "회의/raw/[26.09.16]-회의록녹음요약.md",
     "함석신/raw/ai_game_creation_research.md",
     "함석신/raw/ai_creation_issue_dashboard_proposal.md",
     "함석신/raw/[함석신]-게임_개발_및_창작_AI_활용_가이드.md",
@@ -215,16 +219,12 @@
     "[함석신]-게임_개발_및_창작_AI_활용_가이드.md",
     "김민주/raw/README.md",
     "회의/wiki/[26.09.16]-AI_창작과_인간의_역할_종합_회의록.md",
-    "회의/raw/[26.09.16]-회의록녹음요약.md",
     "김준호/raw/README.md",
     "함석신/wiki/README.md",
     "함석신/schema/template.md",
-    "함석신/schema/schema.md",
     "함석신/wiki",
     "함석신/raw",
     "함석신/schema",
-    "함석신",
-    "김준호/schema",
-    "김준호/wiki"
+    "함석신"
   ]
 }

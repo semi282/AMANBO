@@ -1,20 +1,24 @@
 {
   "main": {
-    "id": "6df6b9f97885f4b1",
+    "id": "06ab500b7a0a9762",
     "type": "split",
     "children": [
       {
-        "id": "5acbc492f1aa8ed1",
+        "id": "aaf0c72b6847ee27",
         "type": "tabs",
         "children": [
           {
-            "id": "b956be6402b57332",
+            "id": "e71c099cb1c40de6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "회의/README.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "README"
             }
           }
         ]
@@ -23,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "9b5e7d4659eec935",
+    "id": "e4427f829c2e8782",
     "type": "split",
     "children": [
       {
-        "id": "49e65abda6e35754",
+        "id": "1b03d09b1771661a",
         "type": "tabs",
         "children": [
           {
-            "id": "ae22347207c0342f",
+            "id": "f16dbcc889b67038",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -46,7 +50,7 @@
             }
           },
           {
-            "id": "c624e01d8f9d0ae9",
+            "id": "e2d316433d91103f",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -63,7 +67,7 @@
             }
           },
           {
-            "id": "6e84405db36d634d",
+            "id": "499436c96b9679cd",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -79,23 +83,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 366.5
   },
   "right": {
-    "id": "ec092213c9969544",
+    "id": "c7cde48afbe83b8b",
     "type": "split",
     "children": [
       {
-        "id": "20010da096c65394",
+        "id": "87ce4dde170459f0",
         "type": "tabs",
         "children": [
           {
-            "id": "a38bce14ff6e98fe",
+            "id": "9c9516adb8bdfa80",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ai_creation_issue_dashboard_proposal.md",
+                "file": "김민주/schema/prompt_pipeline.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,12 +113,12 @@
             }
           },
           {
-            "id": "c757787445ebe86a",
+            "id": "05f4390dbcd9d8df",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ai_creation_issue_dashboard_proposal.md",
+                "file": "김민주/schema/prompt_pipeline.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -123,7 +127,7 @@
             }
           },
           {
-            "id": "6349e1e6148ef7c8",
+            "id": "df1b69c176900316",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -138,7 +142,7 @@
             }
           },
           {
-            "id": "946f5de51f68d0bc",
+            "id": "ff0775c5714082f1",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -152,12 +156,12 @@
             }
           },
           {
-            "id": "7bf12e63b87ae528",
+            "id": "df7edad4e41e7a15",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "ai_creation_issue_dashboard_proposal.md",
+                "file": "김민주/schema/prompt_pipeline.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -184,15 +188,43 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "b956be6402b57332",
+  "active": "f16dbcc889b67038",
   "lastOpenFiles": [
-    "무제.canvas",
-    "raw/[함석신]-게임_개발_및_창작_AI_활용_가이드.md",
-    "ai_creation_issue_dashboard_proposal.md",
-    "raw/ai_game_creation_research.md",
-    "raw/ai_creation_issue_dashboard_proposal.md",
+    "workspace.json",
+    "회의/raw/[26.09.16]-회의록녹음요약.md",
+    "함석신/raw/ai_game_creation_research.md",
+    "함석신/raw/ai_creation_issue_dashboard_proposal.md",
+    "함석신/raw/[함석신]-게임_개발_및_창작_AI_활용_가이드.md",
+    "김준호/raw/news/news_yna_crimson_desert_3m_sales.md",
+    "김준호/raw/news/news_pressian_ai_game_limits.md",
+    "김준호/raw/news/news_newspim_nexon_generative_ai.md",
+    "김준호/raw/news/news_news1_crimson_desert_ai_apology.md",
+    "김준호/raw/news/news_hankyung_ai_game_retro.md",
+    "김준호/raw/news/news_game_donga_ananta_ai_controversy.md",
+    "김준호/raw/news/news_chosun_expedition33_ai_debate.md",
+    "김준호/raw/news/news_byline_ai_slop_game_platform.md",
+    "김준호/raw/news",
+    "김준호/raw/Paper/KCI_FI003305950.pdf",
+    "김준호/raw/Paper/KCI_FI003253366.pdf",
+    "김준호/raw/Paper",
+    "함석신/raw/README.md",
+    "김민주/schema/prompt_pipeline.md",
+    "함석신/ai_game_creation_research.md",
+    "함석신/ai_creation_issue_dashboard_proposal.md",
+    "함석신/[함석신]-게임_개발_및_창작_AI_활용_가이드.md",
     "ai_game_creation_research.md",
+    "ai_creation_issue_dashboard_proposal.md",
     "[함석신]-게임_개발_및_창작_AI_활용_가이드.md",
-    "README.md"
+    "김민주/raw/README.md",
+    "회의/wiki/[26.09.16]-AI_창작과_인간의_역할_종합_회의록.md",
+    "김준호/raw/README.md",
+    "함석신/wiki/README.md",
+    "함석신/schema/template.md",
+    "함석신/wiki",
+    "함석신/raw",
+    "함석신/schema",
+    "함석신",
+    "김준호/schema",
+    "김준호/wiki"
   ]
 }
