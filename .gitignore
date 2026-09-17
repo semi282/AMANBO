@@ -1,0 +1,18 @@
+# Obsidian local workspace & cache (do not sync personal UI/tab state)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspace
+.obsidian/cache/
+**/.obsidian/workspace*.json
+**/.obsidian/workspace
+**/.obsidian/cache/
+
+# Orphaned or duplicate workspace files
+workspace*.json
+workspace.json
+
+# OS & Editor generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
