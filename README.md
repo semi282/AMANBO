@@ -122,4 +122,4 @@ AMANBO/
 * 👤 **김민주**: [대시보드](./김민주/README.md) | [변환프롬프트](./김민주/schema/prompt_pipeline.md) | [RAW보관소](./김민주/raw/README.md) | [WIKI보관소](./김민주/wiki/README.md)
 * 👤 **김준호**: [대시보드](./김준호/README.md) | [변환프롬프트](./김준호/schema/prompt_pipeline.md) | [RAW보관소](./김준호/raw/README.md) | [WIKI보관소](./김준호/wiki/README.md)
 * 👤 **함석신**: [대시보드](./함석신/README.md) | [변환프롬프트](./함석신/schema/prompt_pipeline.md) | [RAW보관소](./함석신/raw/README.md) | [WIKI보관소](./함석신/wiki/README.md)
-* 🏛️ **회의록**: [대시보드](./회의/README.md) | [녹음요약(RAW)](./회의/raw/[26.09.16]-회의록녹음요약.md) | [최신 종합 회의록(WIKI)](./회의/wiki/[26.09.16]-AI_창작과_인간의_역할_종합_회의록.md)
+* 🏛️ **회의록**: [대시보드](./회의/README.md) | [최신 회의록 (카트라이더 2일 스프린트 기획)](./회의/wiki/[26.09.17]-카트라이더_인간vsAI_2일스프린트_및_언리얼미니레이싱_기획.md)
