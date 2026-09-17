@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "김민주/schema/prompt_pipeline.md",
+                "file": "회의/raw/[26.09.16]-회의록녹음요약.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "prompt_pipeline"
+              "title": "[26.09.16]-회의록녹음요약"
             }
           }
         ]
@@ -190,12 +190,22 @@
   },
   "active": "e71c099cb1c40de6",
   "lastOpenFiles": [
+    "함석신/raw/README.md",
+    "김민주/schema/prompt_pipeline.md",
+    "함석신/ai_game_creation_research.md",
+    "함석신/ai_creation_issue_dashboard_proposal.md",
+    "함석신/[함석신]-게임_개발_및_창작_AI_활용_가이드.md",
+    "ai_game_creation_research.md",
+    "ai_creation_issue_dashboard_proposal.md",
+    "[함석신]-게임_개발_및_창작_AI_활용_가이드.md",
+    "함석신/raw/ai_game_creation_research.md",
+    "함석신/raw/ai_creation_issue_dashboard_proposal.md",
+    "함석신/raw/[함석신]-게임_개발_및_창작_AI_활용_가이드.md",
     "김민주/raw/README.md",
     "회의/wiki/[26.09.16]-AI_창작과_인간의_역할_종합_회의록.md",
     "회의/raw/[26.09.16]-회의록녹음요약.md",
     "김준호/raw/README.md",
     "함석신/wiki/README.md",
-    "함석신/raw/README.md",
     "함석신/schema/template.md",
     "함석신/schema/schema.md",
     "함석신/schema/prompt_pipeline.md",
@@ -214,17 +224,7 @@
     "김준호/raw",
     "김준호",
     "김민주/wiki/README.md",
-    "김민주/schema/template.md",
-    "김민주/schema/schema.md",
-    "김민주/schema/prompt_pipeline.md",
     "김민주/wiki",
-    "김민주/schema",
-    "김민주/README.md",
-    "회의/schema/schema.md",
-    "회의/schema/prompt_pipeline.md",
-    "반대/raw/README.md",
-    "회의/wiki/[26.09.16]-게임_제작_AI_활용_바운더리_회의록.md",
-    "중립/wiki/[함석신-스팀_AI라벨링_및_휴먼인더루프_가이드라인].md",
-    "반대/schema/template.md"
+    "김민주/schema"
   ]
 }
