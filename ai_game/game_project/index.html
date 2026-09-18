@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>KartRider Web 3D 🏎️ | 빌리지 레이싱 & SD 캐릭터</title>
+  <meta name="description" content="웹 브라우저에서 바로 즐기는 3D 카트라이더 레이싱 게임! 4종의 독창적 SD 캐릭터와 빌리지 레이싱 맵 2.0!">
+  
+  <!-- Google Fonts: Fredoka & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700;800&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Three.js r128 CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <!-- Background Music Audio (Infinite Loop) -->
+    <audio id="bgm-audio" src="Candy_Coated_Drift (mp3cut.net).mp3" loop preload="auto"></audio>
+
+    <!-- Sound & BGM Toggle Control -->
+    <button id="btn-sound-toggle" class="sound-toggle-btn" aria-label="사운드 켜기/끄기" title="음악/효과음 ON/OFF (단축키 M)">
+      <span id="sound-icon">🔊</span>
+      <span id="sound-label">BGM ON</span>
+    </button>
+
+    <!-- 3D WebGL Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Speed & Booster VFX Overlay -->
+    <div id="speed-lines" class="speed-lines hidden"></div>
+    <div id="boost-overlay" class="boost-overlay hidden"></div>
+
+    <!-- HUD Overlay -->
+    <div id="hud" class="hud-container hidden">
+      <!-- Top Left: Rank & Lap -->
+      <div class="hud-top-left">
+        <div class="rank-badge" id="rank-badge">
+          <span class="rank-num" id="rank-num">1</span>
+          <span class="rank-suffix" id="rank-suffix">ST</span>
+        </div>
+        <div class="lap-info">
+          <div class="lap-title">LAP</div>
+          <div class="lap-value"><span id="current-lap">1</span> / <span id="total-laps">3</span></div>
+          <div class="lap-timer" id="lap-timer">00:00.00</div>
+        </div>
+      </div>
+
+      <!-- Top Right: Minimap -->
+      <div class="hud-top-right">
+        <div class="minimap-wrapper">
+          <canvas id="minimap-canvas" width="160" height="160"></canvas>
+          <div class="minimap-legend">
+            <span class="dot player"></span> 나
+            <span class="dot ai"></span> AI
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Alerts (Drift, Boost, Lap) -->
+      <div id="alert-banner" class="alert-banner hidden">
+        <span id="alert-text">DRIFT!</span>
+      </div>
+
+      <!-- Bottom Center: Booster Inventory -->
+      <div class="hud-bottom-center">
+        <div class="booster-slots" id="booster-slots">
+          <div class="slot empty" id="slot-0"><span class="slot-icon">🚀</span></div>
+          <div class="slot empty" id="slot-1"><span class="slot-icon">🚀</span></div>
+        </div>
+        <div class="boost-gauge-wrapper">
+          <div class="boost-gauge-label">
+            <span>BOOSTER GAUGE</span>
+            <span id="gauge-percent">0%</span>
+          </div>
+          <div class="boost-gauge-bar">
+            <div class="boost-gauge-fill" id="boost-gauge-fill"></div>
+            <div class="boost-gauge-glow"></div>
+          </div>
+        </div>
+        <div class="controls-hint">
+          <span class="key-badge">SHIFT</span> 드리프트 &nbsp;|&nbsp; 
+          <span class="key-badge">CTRL</span> or <span class="key-badge">SPACE</span> 부스터 &nbsp;|&nbsp; 
+          <span class="key-badge">R</span> 리셋
+        </div>
+      </div>
+
+      <!-- Bottom Right: Speedometer -->
+      <div class="hud-bottom-right">
+        <div class="speedometer-circle">
+          <svg class="speed-svg" viewBox="0 0 140 140">
+            <circle class="speed-bg" cx="70" cy="70" r="58"></circle>
+            <circle class="speed-fill" id="speed-meter-fill" cx="70" cy="70" r="58"></circle>
+          </svg>
+          <div class="speed-display">
+            <div class="speed-val" id="speed-value">0</div>
+            <div class="speed-unit">km/h</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Virtual Touch Controls -->
+    <div id="touch-controls" class="touch-controls">
+      <div class="touch-left">
+        <button id="btn-left" class="t-btn t-arrow" aria-label="좌회전">◀</button>
+        <button id="btn-right" class="t-btn t-arrow" aria-label="우회전">▶</button>
+      </div>
+      <div class="touch-right">
+        <button id="btn-drift" class="t-btn t-drift" aria-label="드리프트">DRIFT</button>
+        <button id="btn-boost" class="t-btn t-boost" aria-label="부스터">NITRO</button>
+        <div class="touch-pedals">
+          <button id="btn-down" class="t-btn t-brake" aria-label="후진/브레이크">▼</button>
+          <button id="btn-up" class="t-btn t-gas" aria-label="가속">▲</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Countdown Modal (3, 2, 1, GO!) -->
+    <div id="countdown-overlay" class="countdown-overlay hidden">
+      <div class="countdown-number count-3 count-pop" id="countdown-number">3</div>
+    </div>
+
+    <!-- Start / Title Screen with Character Selection -->
+    <div id="start-screen" class="modal-screen">
+      <div class="modal-card">
+        <div class="logo-area">
+          <div class="logo-sub">HYPER SPEED DRIFT</div>
+          <h1 class="logo-title">KART RIDER<span class="highlight">WEB</span></h1>
+          <div class="map-indicator">
+            📍 MAP: <strong>빌리지 손가락 (Village Fingers)</strong>
+          </div>
+        </div>
+        
+        <!-- 4 Original SD Character Selector Grid -->
+        <div class="char-select-section">
+          <div class="char-select-title">SELECT YOUR RACER (캐릭터 선택)</div>
+          <div class="char-grid" id="char-grid">
+            <div class="char-card selected" data-char="leo">
+              <div class="char-badge leo-badge">LEO</div>
+              <div class="char-avatar">🏎️</div>
+              <div class="char-name">레오 (Leo)</div>
+              <div class="char-trait">스피드 & 밸런스</div>
+            </div>
+            <div class="char-card" data-char="tori">
+              <div class="char-badge tori-badge">TORI</div>
+              <div class="char-avatar">🦊</div>
+              <div class="char-name">토리 (Tori)</div>
+              <div class="char-trait">트릭 & 드리프트</div>
+            </div>
+            <div class="char-card" data-char="luna">
+              <div class="char-badge luna-badge">LUNA</div>
+              <div class="char-avatar">🌸</div>
+              <div class="char-name">루나 (Luna)</div>
+              <div class="char-trait">부드러운 코너링</div>
+            </div>
+            <div class="char-card" data-char="kai">
+              <div class="char-badge kai-badge">KAI</div>
+              <div class="char-avatar">⚡</div>
+              <div class="char-name">카이 (Kai)</div>
+              <div class="char-trait">하이테크 최고속도</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="instructions-panel">
+          <div class="inst-row">
+            <span class="keys">↑ W</span> <span>가속 (엑셀)</span>
+            <span class="keys">↓ S</span> <span>후진 / 브레이크</span>
+            <span class="keys">← → / A D</span> <span>조향</span>
+          </div>
+          <div class="inst-row highlight-row">
+            <span class="keys special">Shift</span> <span><strong>드리프트</strong> (게이지 충전!)</span>
+            <span class="keys special">Space / Ctrl</span> <span><strong>부스터 점화!</strong></span>
+          </div>
+        </div>
+
+        <button id="btn-start" class="btn-primary pulse-anim">
+          <span>START RACE (레이스 시작)</span>
+        </button>
+        
+        <div class="sound-notice">
+          🎵 BGM: <strong>Candy Coated Drift</strong> (무한 반복 재생) &nbsp;|&nbsp; 🔊 사운드 토글: <strong>M</strong>키
+        </div>
+      </div>
+    </div>
+
+    <!-- Finish / Result Screen -->
+    <div id="finish-screen" class="modal-screen hidden">
+      <div class="modal-card result-card">
+        <div class="finish-title" id="finish-title">GOAL IN! 🏁</div>
+        <div class="final-rank-display">
+          <div class="final-rank-badge" id="final-rank-badge">1st</div>
+          <div class="final-rank-sub" id="final-rank-text">우승을 차지했습니다!</div>
+        </div>
+
+        <div class="result-stats">
+          <div class="stat-box">
+            <span class="stat-label">총 기록 (Total Time)</span>
+            <span class="stat-val" id="stat-total-time">01:45.32</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">최고 랩타임 (Best Lap)</span>
+            <span class="stat-val" id="stat-best-lap">00:32.14</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">최고 속도 (Max Speed)</span>
+            <span class="stat-val" id="stat-max-speed">224 km/h</span>
+          </div>
+        </div>
+
+        <button id="btn-restart" class="btn-primary">
+          <span>다시 달리기 (RETRY) 🔄</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Game Scripts -->
+  <script src="src/audio.js?v=2.5"></script>
+  <script src="src/track.js?v=2.5"></script>
+  <script src="src/characters.js?v=2.5"></script>
+  <script src="src/kart.js?v=2.5"></script>
+  <script src="src/ai.js?v=2.5"></script>
+  <script src="src/game.js?v=2.5"></script>
+</body>
+</html>
